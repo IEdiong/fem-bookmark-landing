@@ -1,0 +1,205 @@
+/* 
+! Mobile-First Approach
+- Variables
+- Reset
+- Base Styles
+- Utility Styles
+- Mobile Styles
+- Tablet Styles
+- Desktop Styles 
+*/
+
+/* Variables */
+:root {
+  /* colors */
+  /* primary colors */
+  --soft-blue: hsl(231, 69%, 60%);
+  --soft-red: hsl(0, 94%, 66%);
+
+  /* neutral colors */
+  --grayish-blue: hsl(229, 8%, 60%);
+  --v-dark-blue: hsl(229, 31%, 21%);
+  --off-white: hsl(0, 0%, 97%);
+
+  /* fonts */
+  --fs-body: 1.125rem;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--fs-body);
+  color: var(--v-dark-blue);
+  line-height: 155.556%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+/* Utility Styles */
+
+.container {
+  width: min(84%, 1106px);
+  margin-inline: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.btn {
+  padding: 10px 24px;
+  color: white;
+  font-weight: 500;
+  background-color: var(--soft-blue);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
+  cursor: pointer;
+}
+
+.btn__secondary {
+  color: var(--v-dark-blue);
+  background-color: var(--off-white);
+}
+
+/* Mobile Styles */
+
+/* Desktop Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.nav__list a {
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  line-height: 130.769%;
+  letter-spacing: 1.5px;
+  transition: all 0.4s ease-in;
+}
+
+.nav__list li:last-child a {
+  padding: 12px 32px;
+  color: white;
+  font-weight: medium;
+  background-color: var(--soft-red);
+  border-radius: 5px;
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
+}
+
+.nav__list a:hover {
+  color: var(--soft-red);
+}
+
+.nav__list li:last-child a:hover {
+  color: var(--soft-red);
+  background-color: white;
+  outline: 2px solid var(--soft-red);
+}
+
+#hero {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 68px;
+}
+
+.hero__img {
+  order: 1;
+}
+
+.hero__content {
+  min-width: 540px;
+}
+
+.hero__content h1 {
+  font-size: 3rem;
+  line-height: 108.333%;
+  letter-spacing: -0.15px;
+  margin-bottom: 1.5rem;
+}
+
+.hero__content p {
+  opacity: 0.5;
+  margin-bottom: 2rem;
+}
+
+.hero__content .cta__container button {
+  margin-inline-end: 24px;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}

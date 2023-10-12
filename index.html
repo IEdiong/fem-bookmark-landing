@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Bookmark landing page</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/mobile-styles.css" />
+
+    <!-- Scripts -->
+    <script src="./scripts/index.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header container">
+      <img src="./images/logo-bookmark.svg" alt="logo" />
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="container">
+      <section id="hero">
+        <div class="hero__img">
+          <img src="./images/illustration-hero.svg" alt="hero" />
+        </div>
+        <div class="hero__content">
+          <h1>A Simple Bookmark Manager</h1>
+          <p>
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="cta__container">
+            <button class="btn">Get it on Chrome</button
+            ><button class="btn btn__secondary">Get it on Firefox</button>
+          </div>
+        </div>
+      </section>
+      <section id="features">
+        <h2>Features</h2>
+        <p>
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+        <!-- Tab links -->
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'London')">
+            London
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Paris')">
+            Paris
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+            Tokyo
+          </button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="London" class="tabcontent">
+          <h3>London</h3>
+          <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+          <h3>Paris</h3>
+          <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+          <h3>Tokyo</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <!-- <div class="tab-component">
+          Simple Bookmarking Speedy Searching Easy Sharing
+    Bookmark in one click Organize your bookmarks however you like. Our simple
+    drag-and-drop interface gives you complete control over how you manage your
+    favourite sites. More Info Intelligent search Our powerful search feature
+    will help you find saved sites in no time at all. No need to trawl through
+    all of your bookmarks. More Info Share your bookmarks Easily share your
+    bookmarks and collections with others. Create a shareable link that you can
+    send at the click of a button. More Info
+        </div> -->
+      </section>
+      <section id="downloads">
+        <h2>Download the extension</h2>
+        <p>
+          We&apos;ve got more browsers in the pipeline. Please do let us know if
+          you&apos;ve got a favourite you&apos;d like us to prioritize.
+        </p>
+        <div class="grid__container">
+          Add to Chrome Minimum version 62 Add & Install Extension Add to
+          Firefox Minimum version 55 Add & Install Extension Add to Opera
+          Minimum version 46 Add & Install Extension
+        </div>
+      </section>
+      <section id="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Here are some of our FAQs. If you have any other questions you&apos;d
+          like answered please feel free to email us.
+        </p>
+        <div class="accordion">
+          <!-- Question 1 -->
+          What is Bookmark?
+
+          <!-- Answer 1 -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+          tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis
+          quam ornare mattis.
+
+          <!-- Question 2 -->
+          How can I request a new browser?
+
+          <!-- Answer 2 -->
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+          ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
+          aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+          Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+          Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+
+          <!-- Question 3 -->
+          Is there a mobile app?
+
+          <!-- Answer 3 -->
+          Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+          vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
+          quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex
+          et ultricies bibendum.
+
+          <!-- Question 4 -->
+          What about other Chromium browsers?
+
+          <!-- Answer 4 -->
+          Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
+          mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque
+          non ut velit.
+        </div>
+        <button>More Info</button>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer__top">
+        <p>35,000+ already joined</p>
+        <p>Stay up-to-date with what we&apos;re doing</p>
+        <form>
+          <label for="email">email</label>
+          <input id="email" type="email" />
+          <button type="submit">Contact Us</button>
+        </form>
+      </div>
+      <div class="footer__bottom">
+        <div class="secondary__nav">
+          <img src="./images/logo-bookmark.svg" alt="logo" />
+          <nav>
+            <ul>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="socials"></div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+<!-- <style>
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+</style> -->
+<!-- <p class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by <a href="#">Your Name Here</a>.
+  </p> -->
