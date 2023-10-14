@@ -57,6 +57,12 @@ h3 {
   font-weight: 500;
 }
 
+h2 {
+  font-size: 2rem;
+  line-height: 162.5%;
+  letter-spacing: -0.1px;
+}
+
 /* Utility Styles */
 
 .container {
@@ -185,7 +191,19 @@ h3 {
   margin-inline-end: 24px;
 }
 
-/* Style the tab */
+#features {
+  padding-top: 80px;
+  text-align: center;
+}
+
+#features > p {
+  width: 540px;
+  margin-inline: auto;
+  margin-block-end: 72px;
+  opacity: 0.5;
+}
+
+/*! Style the tab */
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
