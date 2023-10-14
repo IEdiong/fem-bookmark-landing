@@ -78,7 +78,9 @@ h3 {
 .btn {
   padding: 10px 24px;
   color: white;
+  font-size: 0.875rem;
   font-weight: 500;
+  line-height: 28px;
   background-color: var(--soft-blue);
   border: none;
   border-radius: 5px;
@@ -89,6 +91,7 @@ h3 {
 .btn__secondary {
   color: var(--v-dark-blue);
   background-color: var(--off-white);
+  opacity: 0.75;
 }
 
 /* Mobile Styles */
@@ -137,11 +140,25 @@ h3 {
 }
 
 #hero {
-  padding-top: 100px;
+  padding-block: 100px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   column-gap: 68px;
+  position: relative;
+}
+
+#hero:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -700px;
+  height: 352px;
+  width: 1000px;
+  background-color: var(--soft-blue);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  border-radius: 317px;
+  z-index: -2;
 }
 
 .hero__img {
